@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="netflix.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#E4131A</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <FlexLayout Direction="Column" Padding="20">
+
+            <StackLayout Orientation="Vertical" Margin="0, 0, 0, 20" >
+
+                <Label Text="Bienvenue sur .NETFLIX !" 
+                       FontSize="Title"
+                       HorizontalOptions="Center" />
+
+                <Label Text="Accéder à des informations sur des milliers de films et séries !" 
+                       FontSize="16"
+                       HorizontalOptions="Center" />
+
+                <Entry x:Name="entrySearch" 
+                    Placeholder="Tapez le nom du film ou du sére !" />
+
+                <Button Text="Rechercher" 
+                        x:Name="btnSearch"
+                        BackgroundColor="{StaticResource Accent}"
+                         />
+
+            </StackLayout>
+            <ActivityIndicator x:Name="activityIndicator" 
+                           IsVisible="False"
+                           IsRunning="False" />
+            <Label x:Name="lblMovies"
+                   Text="Films"
+                   FontSize="Body"
+                   IsVisible="False" />
+            <ScrollView x:Name="scrollViewMovies" Margin="0, 10, 0, 10" Orientation="Horizontal">         
+            </ScrollView>
+            <Label x:Name="lblSeries"
+                   Text="Séries"
+                   FontSize="Body"
+                   IsVisible="False" />
+            <ScrollView x:Name="scrollViewSeries" Margin="0, 10, 0, 10" Orientation="Horizontal">
+            </ScrollView>
+        </FlexLayout>
+    </ScrollView>
+
+</ContentPage>

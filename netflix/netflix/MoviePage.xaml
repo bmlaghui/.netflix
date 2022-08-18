@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="netflix.MoviePage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="{Binding Title}" FontSize="Body" HorizontalOptions="Center" />
+            <Image Source="{Binding Poster}" HeightRequest="200" HorizontalOptions="Center" />
+
+            <Label Text="Synopsis" FontAttributes="Bold" />
+            <Label Text="{Binding Plot}" />
+
+            <Label Text="Durée" FontAttributes="Bold" />
+            <Label Text="{Binding Runtime}" />
+
+            <Label Text="Genre" FontAttributes="Bold" />
+            <Label Text="{Binding Genre}" />
+
+            <Label Text="Type" FontAttributes="Bold" />
+            <Label Text="{Binding Type}" FontSize="Body" />
+
+            <Label Text="Date de sortie" FontAttributes="Bold" />
+            <Label Text="{Binding Released}" />
+
+            <Label Text="Metascore" FontAttributes="Bold" />
+            <Label Text="{Binding Metascore}" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
