@@ -1,14 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="netflix.MainPage">
+             x:Class="netflix.MainPage"
+             Title="Bienvenue sur .NETFLIX !"
+             BackgroundColor="Black"
+             
+             
+             >
     <ContentPage.Resources>
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="White"/>
+            <Setter Property="BarTextColor" Value="#E4131A"   />
+        </Style>
         <ResourceDictionary>
             <Color x:Key="Accent">#E4131A</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ScrollView>
+    <ScrollView >
         <FlexLayout Direction="Column" Padding="20">
 
             <StackLayout Orientation="Vertical" Margin="0, 0, 0, 20" >
@@ -16,6 +25,7 @@
                 <Label Text="Bienvenue sur .NETFLIX !" 
                        FontSize="Title"
                        HorizontalOptions="Center" />
+                <Image Source="@drawable/logo" HeightRequest="200" HorizontalOptions="Center" />
 
                 <Label Text="Accéder à des informations sur des milliers de films et séries !" 
                        FontSize="16"

@@ -2,28 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="netflix.MoviePage"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+              BackgroundColor="Black">
     <ContentPage.Content>
         <StackLayout Padding="20">
-            <Label Text="{Binding Title}" FontSize="Body" HorizontalOptions="Center" />
+            <Label Text="{Binding Title}" FontSize="Body" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Yellow" />
             <Image Source="{Binding Poster}" HeightRequest="200" HorizontalOptions="Center" />
 
-            <Label Text="Synopsis" FontAttributes="Bold" />
+            <Label Text="Synopsis" FontAttributes="Bold" TextDecorations="Underline"  TextColor="Yellow"/>
             <Label Text="{Binding Plot}" />
 
-            <Label Text="Durée" FontAttributes="Bold" />
+            <Label Text="Durée" FontAttributes="Bold" TextDecorations="Underline"  TextColor="Yellow"/>
             <Label Text="{Binding Runtime}" />
 
-            <Label Text="Genre" FontAttributes="Bold" />
+            <Label Text="Genre" FontAttributes="Bold" TextDecorations="Underline"  TextColor="Yellow"/>
             <Label Text="{Binding Genre}" />
 
-            <Label Text="Type" FontAttributes="Bold" />
+            <Label Text="Type" FontAttributes="Bold" TextDecorations="Underline"  TextColor="Yellow" />
             <Label Text="{Binding Type}" FontSize="Body" />
 
-            <Label Text="Date de sortie" FontAttributes="Bold" />
+            <Label Text="Date de sortie" FontAttributes="Bold" TextDecorations="Underline"  TextColor="Yellow"/>
             <Label Text="{Binding Released}" />
 
-            <Label Text="Metascore" FontAttributes="Bold" />
+            <Label Text="Metascore" FontAttributes="Bold" TextDecorations="Underline"  TextColor="Yellow" />
             <Label Text="{Binding Metascore}" />
 
         </StackLayout>

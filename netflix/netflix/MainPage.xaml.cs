@@ -15,9 +15,17 @@ namespace netflix
         public MainPage()
         {
             InitializeComponent();
+
             btnSearch.Clicked += OnSearch;
 
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.Red;
+        }
+
 
         private async void OnSearch(object sender, EventArgs e)
         {
